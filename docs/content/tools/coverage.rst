@@ -51,19 +51,23 @@ After each interval in B, **coverageBed** will report:
 4) The fraction of bases in B that had non-zero coverage from features in A.
 
 Below are the number of features in A (N=...) overlapping B and fraction of bases in B with coverage.
-::
+
+.. code:: bash
+
   Chromosome  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   
   BED FILE B  ***************     ***************     ******    **************   
   
   BED File A  ^^^^ ^^^^              ^^             ^^^^^^^^^    ^^^ ^^ ^^^^
                 ^^^^^^^^                                      ^^^^^ ^^^^^ ^^
-  
+
   Result      [  N=3, 10/15 ]     [  N=1, 2/15 ]     [N=1,6/6]   [N=6, 12/14 ]
 
 
 For example:
-::
+
+.. code:: bash
+
   cat A.bed
   chr1  10  20
   chr1  20  30
@@ -89,7 +93,9 @@ Use the "**-s**" option if one wants to only count coverage if features in A are
 feature / window in B. This is especially useful for RNA-seq experiments.
 
 For example (note the difference in coverage with and without **-s**:
-::
+
+.. code:: bash
+
   cat A.bed
   chr1  10  20  a1  1  -
   chr1  20  30  a2  1  -
@@ -120,7 +126,9 @@ features in A across B.
 In this case, each entire feature in B will be reported, followed by the depth of coverage, the number of
 bases at that depth, the size of the feature, and the fraction covered. After all of the features in B have
 been reported, a histogram summarizing the coverage among all features in B will be reported.
-::
+
+.. code:: bash
+
   cat A.bed
   chr1  10  20  a1  1  -
   chr1  20  30  a2  1  -
@@ -150,7 +158,9 @@ positions across each B interval.
 
 The output will consist of a line for each one-based position in each B feature, followed by the coverage
 detected at that position.
-::
+
+.. code:: bash
+
   cat A.bed
   chr1  0  5
   chr1  3  8
